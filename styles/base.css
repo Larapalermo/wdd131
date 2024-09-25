@@ -1,0 +1,73 @@
+@import url(https://fonts.google.com/specimen/Roboto?query=roboto);
+
+/*Styles*/
+body {
+    font-family: 'roboto', sans-serif;
+    background-color: rgb(196, 175, 230);
+    margin: 0%;
+    padding: 0%;
+    color: rgb(67, 32, 100)
+}
+
+nav {
+    background-color: #333;
+    color: aliceblue;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    margin: 40px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 2px;
+}
+
+/*main*/
+main {
+    max-width: 1200px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 2%;
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/*footer*/
+footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
