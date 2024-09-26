@@ -9,6 +9,10 @@ body {
     color: rgb(67, 32, 100)
 }
 
+h1 {
+    margin: 2%;
+}
+
 nav {
     background-color: #333;
     color: aliceblue;
@@ -60,13 +64,17 @@ main {
     border-radius: 5px;
 }
 
+li {
+    margin-bottom: 5%;
+}
+
 /*footer*/
 footer {
     background-color: #333;
     color: #ffffff;
     text-align: center;
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    width: 100%;
+    padding: 20px 0px;
+    position: relative;
+    margin: 0%;
 }
