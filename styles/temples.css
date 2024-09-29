@@ -51,6 +51,11 @@ nav a:hover {
     color: #f7c2c2;
 }
 
+#hamburger {
+    display: block;
+    cursor: pointer;
+}
+
 .active {
     color: rgb(255, 0, 242);
 }
