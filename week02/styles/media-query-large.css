@@ -1,16 +1,9 @@
-@media (min-width: 740px) {
-    header {
-        display: flex;
-        text-align: center;
-        justify-content: center;
+@media (min-width: 768px) {
+    .main-content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    nav {
-        justify-content: flex-end;
-        flex-direction: row;
-    }
-
-    nav a {
-        flex: 1 1 100%;
+    .navbar a {
+        font-weight: 700;
     }
 }
