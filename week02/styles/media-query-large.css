@@ -1,10 +1,16 @@
-@media screen and (min-width: 500px) {
+@media (min-width: 740px) {
     header {
-        background-color: black;
-        color: white;
+        display: flex;
+        text-align: center;
+        justify-content: center;
     }
 
-    main {
-        grid-template-columns: 1fr 1fr;
+    nav {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+
+    nav a {
+        flex: 1 1 100%;
     }
 }
