@@ -30,9 +30,12 @@ nav ul {
     list-style: none;
 }
 
-nav li {
-    display: flex;
-    margin: 40px;
+.navigation li {
+    display: none;
+}
+
+.show li {
+    display: block;
 }
 
 nav a {
@@ -51,6 +54,8 @@ nav a:hover {
     color: #f7c2c2;
 }
 
+.navigation {}
+
 #hamburger {
     display: block;
     cursor: pointer;
@@ -58,6 +63,11 @@ nav a:hover {
 
 .active {
     color: rgb(255, 0, 242);
+}
+
+#menu.show {
+
+    content: 'X';
 }
 
 main-content {
