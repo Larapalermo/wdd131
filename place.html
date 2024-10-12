@@ -4,46 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Lara Palermo</title>
+    <title>WDD 131 -Tokio- Lara Palermo</title>
     <meta name="description"
-        content="WDD 131 - Dynamic Web Fundamentals - Lara Palermo - Home Page about me, my country, and Web Dev resources.">
+        content="WDD 131 - Dynamic Web Fundamentals - Lara Palermo - Home Page about the city I want to visit.">
     <meta name="author" content="Lara Palermo">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
-<body
-    style="background-image: url('images/tokio.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="a">
-        <header>
-            <h1>Tokio</h1>
-        </header>
-        <div class="b">
-            <div class="data">
-                <h2>Data</h2>
-                <ul>
-                    <li><strong>Area: 2,194 km² (847 mi²)</strong></li>
-                    <li><strong>Population: About 14 million in the city</strong></li>
-                    <li><strong>Capital: Tokyo is the capital of Japan</strong></li>
-                    <li><strong>Languages: The official language is Japanese</strong></li>
-                    <li><strong>Currency: Japanese Yen (JPY)</strong></li>
-                    <li><strong>Time Zone: Japan operates in the Japan Standard Time (JST), which is UTC+9</strong></li>
-                    <li><strong>Calling code: 03</strong></li>
-                    <li><strong>Internet TLD: .jp</strong></li>
-                </ul>
-            </div>
-            <div class="weather">
-                <h2>Weather</h2>
-                <ul>
-                    <li><strong>Temperature: 16°</strong></li>
-                    <li><strong>Conditions: partly cloudy</strong></li>
-                    <li><strong>Wind: 18 km/h</strong></li>
-                    <li><strong>Wind chill: 10°C</strong></li>
-                </ul>
-            </div>
-        </div>
-        <footer>
-            <p> &copy; 2024 &#128640; Lara Palermo &#128640; | Tokio</p>
-        </footer>
-    </div>
+<body>
+    <header>
+        <h1>Tokio</h1>
+    </header>
+    <section class="hero">
+        <img src="images/tokio.webp" srcset="images/tokio.webp 800w, images/tokio.webp 1200w"
+            sizes="(max-width: 600px) 100vw, (min-width: 601px) 50vw" alt="Imagen principal">
+    </section>
+    <section class="data">
+        <h2>Data</h2>
+        <p>Area: 2,194 km² (847 mi²)</p>
+        <p>Population: About 14 million in the city</p>
+        <p>Capital: Tokyo is the capital of Japan</p>
+        <p>Languages: The official language is Japanese</p>
+        <p>Currency: Japanese Yen (JPY)</p>
+        <p>Time Zone: Japan operates in the Japan Standard Time (JST), which is UTC+9</p>
+        <p>Calling code: 03</p>
+        <p>Internet TLD: .jp</p>
+    </section>
+    <section class="weather">
+        <h2>Weather</h2>
+        <image src="images/weather.svg" alt="icon" width=50px></image>
+        <p>Temperature: 16°</p>
+        <p>Conditions: partly cloudy</p>
+        <p>Wind: 18 km/h</p>
+        <p>Wind chill: <span id="wind-chill">N/A</span></p>
+    </section>
+    <footer>
+        <p> &copy; 2024 &#128640; Lara Palermo &#128640; | Tokio</p>
+    </footer>
 </body>
+
+</html>
