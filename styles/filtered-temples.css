@@ -54,26 +54,14 @@ nav a:hover {
     color: #f7c2c2;
 }
 
-.hamburger {
-    display: block;
-    cursor: pointer;
-}
 
 .active {
     color: rgb(255, 0, 242);
 }
 
-.menu.show {
-
-    content: 'X';
-}
-
-main-content {
+.container {
     max-width: 90%;
-    margin: 20px auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+    text-align: center;
 }
 
 figure {
@@ -97,21 +85,4 @@ footer {
     padding: 20px 0px;
     position: relative;
     margin: 0%;
-}
-
-.temple-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 10px;
-    padding: 15px;
-    width: 300px;
-}
-
-.temple-info {
-    padding: 10px 0;
-}
-
-img {
-    max-width: 100%;
-    border-radius: 5px;
 }

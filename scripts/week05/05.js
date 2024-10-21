@@ -10,6 +10,19 @@ lastModifiedParagraph.textContent = `Last modified: ${document.lastModified}`;
 footer.appendChild(copyrightParagraph);
 footer.appendChild(lastModifiedParagraph);
 
+const hamburger = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation')
+
+hamburger.addEventListener('click', () => {
+    navigation.classList.toggle('show');
+
+    if (navigation.classList.contains("active")) {
+        hamburger.innerHTML = '&times;';
+    } else {
+        hamburger.innerHTML = '&#9776;';
+    }
+});
+
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -73,61 +86,63 @@ const temples = [
         dedicated: "2001, March, 18",
         area: 10700,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/montevideo-uruguay/400x250/montevideo-uruguay-temple-lds-83476-wallpaper.jpg"
+            "https://churchofjesuschristtemples.org/wp-content/uploads/2021/10/Montevideo-Uruguay-Temple-1-600x400.jpg"
     },
     {
-        templeName: "Arequipa Perú",
-        location: "Arequipa, Perú",
-        dedicated: "2019, December, 15",
-        area: 26969,
+        templeName: "Brasilia Brasil",
+        location: "Brasilia, Brazil",
+        dedicated: "2023, September, 17",
+        area: 3387,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/arequipa-peru/400x250/1-55f6c59ce8f9c093a9c689067f8674335de544e2.jpeg"
+            "https://churchofjesuschristtemples.org/brasilia-brazil-temple/photographs/#Gallery-6"
     },
     {
-        templeName: "Billings Montana",
-        location: "Billings, Montana",
-        dedicated: "1999, November, 20-21",
-        area: 33800,
+        templeName: "Buenos Aires Argentina",
+        location: "Buenos Aires, Argentina",
+        dedicated: "1986, January, 17-19",
+        area: 30659,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/billings-montana/400x250/10-Billings-Montana-Temple-1566343.jpg"
-    }
+            "https://churchofjesuschristtemples.org/buenos-aires-argentina-temple/photographs/#Gallery-2"
+    },
 ];
 
-const cardContainer = document.getElementById('card-cont');
-temples.forEach(temple => {
-    const card = document.createElement('div')
-    card.className = 'card';
+const container = document.getElementById("temples-container");
 
-    const image = document.createElement('img')
-    image.src = temple.imageUrl;
-    image.alt = temple.templeName;
+temples.forEach((temple) => {
+    const templeCard = document.createElement("div");
+    templeCard.className = "temple-card";
 
-    const title = document.createElement('h3')
-    title.textContent = temple.templeName
+    templeCard.innerHTML = `
+                <h2>${temple.templeName}</h2>
+                <img src="${temple.imageUrl}" alt="${temple.templeName}">
+                <p><strong>Location:</strong> ${temple.location}</p>
+                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                <p><strong>Area:</strong> ${temple.area} sq ft</p>
+            `;
 
-    const location = document.createElement('p')
-    location.textContent = `Location: ${temple.location}`
-
-    const dedicated = document.createElement('p')
-    dedicated.textContent = `Dedicated: ${temple.dedicated}`
-
-    const area = document.createElement('p')
-    area.textContent = `Area: ${temple.area}`
-
-    //add
-    card.appendChild(image);
-    card.appendChild(title);
-    card.appendChild(location);
-    card.appendChild(dedicated);
-    card.appendChild(area);
-
-    cardContainer.appendChild(card);
-
+    container.appendChild(templeCard);
 });
 
+
+const hamburger = document.querySelector('#menu');
+const navigation = document.querySelector('.navigation')
+
+hamburger.addEventListener('click', () => {
+    navigation.classList.toggle('show');
+
+    if (navigation.classList.contains("active")) {
+        hamburger.innerHTML = '&times;';
+    } else {
+        hamburger.innerHTML = '&#9776;';
+    }
+});
+
+
+
+
 function renderTemples(filteredTemples) {
-    const container = document.getElementById('card-cont');
-    container.innerHTML = '';
+    const container = document.getElementById("card-cont");
+    container.innerHTML = ""; // Clear existing cards  
 
     filteredTemples.forEach(temple => {
         const templeCard = document.createElement("div");
@@ -145,33 +160,35 @@ function renderTemples(filteredTemples) {
     });
 }
 
+// Filter functions  
 function showAllTemples() {
     renderTemples(temples);
 }
 
 function showOldTemples() {
-    const oldTemples = temples.filter(temple => new Date(temple.dedicated.split(",")[0]) < new Date('1900-01-01'));
-    renderTemples(oldTemples)
+    const oldTemples = temples.filter(temple => new Date(temple.dedicated.split(",")[0]) < new Date("1900-01-01"));
+    renderTemples(oldTemples);
 }
 
 function showNewTemples() {
-    const newTemples = temples.filter(temple => new Date(temple.dedicated.split(",")[0]) > new Date('2000-01-01'));
-    renderTemples(newTemples)
+    const newTemples = temples.filter(temple => new Date(temple.dedicated.split(",")[0]) > new Date("2000-01-01"));
+    renderTemples(newTemples);
 }
 
 function showLargeTemples() {
     const largeTemples = temples.filter(temple => temple.area > 90000);
-    renderTemples(largeTemples)
+    renderTemples(largeTemples);
 }
 
 function showSmallTemples() {
     const smallTemples = temples.filter(temple => temple.area < 10000);
-    renderTemples(smallTemples)
+    renderTemples(smallTemples);
 }
 
+// Event listeners for navigation  
 document.querySelectorAll('.navigation a').forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default link behavior  
         const filter = link.textContent.trim();
         switch (filter) {
             case "Home":
@@ -187,7 +204,7 @@ document.querySelectorAll('.navigation a').forEach(link => {
                 showLargeTemples();
                 break;
             case "Small":
-                showSmallTemples();
+                showLargeTemples();
                 break;
         }
     });
