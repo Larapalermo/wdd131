@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - Form</title>
+    <meta name="description" content="Product review form page">
+    <meta name="author" content="Lara Virginia Palermo">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html">
+            <div>Product name</div>
+            <label>
+                <select id="productSelect" name="productId" required>
+                    <option value="">Seleccione un producto</option>
+                </select>
+            </label> <br>
+            <div>Overall rating</div>
+            <div class="rating-item">
+                <span>⭐</span>
+                <label>
+                    <input type="radio" name="rating" value="one"></label>
+            </div>
+            <div class="rating-item">
+                <span>⭐⭐</span>
+                <label>
+                    <input type="radio" name="rating" value="two"></label>
+            </div>
+            <div class="rating-item">
+                <span>⭐⭐⭐</span>
+                <label>
+                    <input type="radio" name="rating" value="three"></label>
+            </div>
+            <div class="rating-item">
+                <span>⭐⭐⭐⭐</span>
+                <label>
+                    <input type="radio" name="rating" value="four"></label>
+            </div>
+            <div class="rating-item">
+                <span>⭐⭐⭐⭐⭐</span>
+                <label>
+                    <input type="radio" name="rating" value="five"> </label>
+            </div>
+            </div> <br>
+            <div>Date of Instalation</div>
+            <label><input type="date" name="completeDate"></label><br>
+            <div>Wich features did you find useful in the product?</div>
+            <div>Check all that apply</div><br>
+            <label><input type="checkbox" name="durability1" value="yes">Durability</label><br>
+            <label><input type="checkbox" name="durability2" value="yes">Ease of use</label><br>
+            <label><input type="checkbox" name="durability3" value="yes">Performance</label><br>
+            <label><input type="checkbox" name="durability4" value="yes">Design</label><br>
+            <div>Written review (optional)</div>
+            <textarea id="textarea" name="message" rows="10" cols="50" placeholder="Write here..."></textarea><br>
+            <div>Your name (optional)</div>
+            <label><input type="text" name="pname"></label><br><br>
+            <input type="submit" value="propose my course" id="redirectButton">
+        </form>
+
+    </main>
+    <footer>
+        <p> &copy; 2024 &#128640; Lara Palermo &#128640; | Form</p>
+    </footer>
+</body>
+
+</html>
